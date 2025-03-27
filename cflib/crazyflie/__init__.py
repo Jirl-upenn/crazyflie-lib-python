@@ -233,6 +233,7 @@ class Crazyflie():
         answering.
         """
         self.state = State.CONNECTED
+        time.sleep(1.5)
         self.link_established.call(self.link_uri)
         self.packet_received.remove_callback(self._check_for_initial_packet_cb)
 
